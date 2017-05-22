@@ -1,0 +1,19 @@
+<!-- breadcrumb -->
+<div class="crumbs">
+	<div class="uk-container uk-container-center" >
+
+			{pc:get sql="select * from v9_category where parentid=18 "}
+			{loop $data $r}
+			<h1><li style="float: left;width: 181px;height: 34px;line-height: 34px; border: 1px solid #1891d2;cursor: pointer;text-align: center;color: #1891d2;font-size: 14px;margin-right: 8px;list-style-type: none;margin-top: 12px;"><a href="http://localhost/cms/pc/index.php?m=content&c=index&a=lists&catid=10">&nbsp{$r[catname]}&nbsp</a></li></h1>
+				
+			{/loop}
+			{/pc}
+			<div class="uk-breadcrumb">
+			<span>当前位置</span>/
+			<a href="{siteurl($siteid)}">首页</a>/
+			{catpos($catid,'/')}
+			<span class="uk-active">正文</span>
+			</div>
+	</div>
+</div>
+<!-- / breadcrumb -->

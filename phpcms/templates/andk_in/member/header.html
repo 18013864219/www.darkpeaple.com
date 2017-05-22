@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+<meta name="keywords" content="{$SEO['keyword']}">
+<meta name="description" content="{$SEO['description']}">
+<!-- bootrstrap -->
+<link href="{BJH_PATH}/bs/css/bootstrap.min.css" rel="stylesheet">
+<link href="{BJH_PATH}/bs/css/bootstrap.css" rel="stylesheet">
+<script src="{BJH_PATH}/bs/js/jquery.min.js"></script>
+<script src="{BJH_PATH}/bs/js/bootstrap.min.js"></script>
+<script src="{BJH_PATH}/bs/js/holder.min.js"></script>
+{if !$catid}
+<link rel="stylesheet" href="{BJH_PATH}css/Lindex.css?v=2.0">
+<script src="{BJH_PATH}js/jquery.min.js?v=2.0"></script>
+<script src="{BJH_PATH}js/jquery.royalslider.min.js?v=2.0"></script>
+{else}
+<link rel="stylesheet" href="{BJH_PATH}css/LlistShow.css?v=2.0">
+<script src="{BJH_PATH}js/jquery.min.js?v=2.0"></script>
+{/if}
+<!--[if lt IE 9]>
+<script src="{BJH_PATH}js/html5.js"></script>
+<link rel="stylesheet" href="{BJH_PATH}css/Lie.css">
+<![endif]-->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{BJH_PATH}ico/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="{BJH_PATH}ico/favicon.png">
+</head>
+<body>
+<header style="background-color:black;">
+<!-- nav -->
+<nav class="uk-navbar" style="background-color:black;height:80px;">
+	<div class="uk-container uk-container-center">
+		<a class="uk-navbar-brand" href="."><img src="{BJH_PATH}images/logo.png" width="288" height="38" style="position:relative;top:-20px;"></a>
+		{pc:content action="category" catid="0" num="25" siteid="$siteid" order="listorder ASC"}
+		<ul class="uk-navbar-nav hidden-small" style="position:relative;left:-300px;">
+			<li {if !$catid}  class="uk-active"{/if}><a href=".">首页</a></li>
+			{loop $data $r}
+			<li  class="uk-parent{if $catid==$r[catid] || $top_parentid==$r[catid]} uk-active{/if}"> <a href="{$r[url]}">{$r[catname]}</a>
+				{pc:content action="category" catid="$r[catid]" num="25" siteid="{$siteid}" order="listorder ASC"}
+				{if $data}
+				<div class="uk-dropdown uk-dropdown-navbar">
+					<ul class="uk-nav uk-nav-navbar">
+						{loop $data $v}
+						<li><a href="{$v[url]}">{$v[catname]}</a></li>
+						{/loop}
+					</ul>
+				</div>
+				{/if}
+				{/pc}
+			</li>
+			{/loop}
+			
+		</ul>
+		{/pc}
+		<ul class="uk-navbar-nav hidden-small" style="position:relative;right:-400px;">
+			<li style="margin-top:5px">
+				<span>
+				{if $_username}<span style="font-size:15px;color:#fff;">{L('你好')} {get_nickname()} |</span>, 
+				<a style="font-size:15px;color:#fff;" style="" href="{APP_PATH}index.php?m=member&siteid={$siteid}" target="_blank">{L('个人中心')} |</a> 
+				<a style="font-size:15px;color:#fff;" href="{APP_PATH}index.php?m=member&c=index&a=logout&forward={urlencode($_GET['forward'])}&siteid={$siteid}" target="_top">{L('退出')}</a>&nbsp;&nbsp;{else} 
+				</span>
+						<span style="margin-bottom:10px">
+							<a style="font-size:18px;color:#fff;" href="{APP_PATH}index.php?m=member&c=index&a=register&siteid={$siteid}" target="_blank">{L('注册')}</a>
+								&nbsp;&nbsp;&nbsp;&nbsp;
+							<a style="font-size:18px;color:#fff;" href="{APP_PATH}index.php?m=member&c=index&a=login&forward={urlencode($_GET['forward'])}&siteid={$siteid}" target="_top">{L('登录')}</a>
+						</span>
+				{/if}
+			</li>
+		</ul>
+		<div class="uk-navbar-flip"><a href="#tm-offcanvas" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas=""></a></div>
+	</div>
+</nav>
+<!-- / nav -->
+</header>

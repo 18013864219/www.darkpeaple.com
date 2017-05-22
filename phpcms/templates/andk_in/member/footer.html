@@ -1,0 +1,50 @@
+<center>
+<div class="bk10"></div>
+	
+	<div class="box blogroll ylink">
+        <div class="bk10"></div>
+	<ul class="colli imgul">
+        {pc:link  action="type_list" siteid="$siteid" linktype="1" order="listorder DESC" num="8" return="pic_link"}
+        {loop $pic_link $v}
+        <li><a href="{$v['url']}" title="{$v['name']}" target="_blank"><img src="{$v[logo]}" width="88" height="31" /></a></li>
+        {/loop}
+        {/pc}
+    </ul>
+     {pc:link  action="type_list" siteid="$siteid" order="listorder DESC" num="10" return="dat"}
+     <div class="bk10"></div>
+	<div class="linka" style="font-size:20px;margin-left:-800px;">
+	<span>友情链接 : </span>
+		{loop $dat $v}
+              {if $type==0}
+              <a href="{$v[url]}" target="_blank">{$v[name]}</a> |
+              {else}
+              <a href="{$v[url]}" target="_blank"><img src="{$v[logo]}" width="88" height="31" style="border: 1px solid #FFBE7A;"></a> 
+              {/if}
+		{/loop}
+ 	</div>
+	{/pc}
+</div>
+</div>
+<br>
+<div class="footer" style="background-color:#4D4D4D;height:130px;color:#FFFFFF;">
+<p class="info" style="position:relative;top:20px;">
+{pc:content action="category" catid="1" num="15" siteid="$siteid" order="listorder ASC"}
+{loop $data $r}
+<a href="{$r[url]}" target="_blank" style="color:#FFFFFF;font-size:20px;margin-top:-20px;">{$r[catname]}</a> |
+{/loop}
+{/pc}
+<br><br><br><br>
+<div>Copyright © 2017.南京博峻电子商务有限公司 | 苏ICP备15060379号</div>
+</div>
+
+</center>
+<script type="text/javascript">
+$(function(){
+	$(".picbig").each(function(i){
+		var cur = $(this).find('.img-wrap').eq(0);
+		var w = cur.width();
+		var h = cur.height();
+	   $(this).find('.img-wrap img').LoadImage(true, w, h,'{IMG_PATH}msg_img/loading.gif');
+	});
+})
+</script>

@@ -1,0 +1,346 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>PHPCMS演示站</title>
+<meta name="keywords" content="PHPCMS演示站">
+<meta name="description" content="PHPCMS演示站">
+<!-- bootrstrap -->
+<link href="http://localhost/cms/pc/statics/assets//bs/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://localhost/cms/pc/statics/assets//bs/css/bootstrap.css" rel="stylesheet">
+<script src="http://localhost/cms/pc/statics/assets//bs/js/jquery.min.js"></script>
+<script src="http://localhost/cms/pc/statics/assets//bs/js/bootstrap.min.js"></script>
+<script src="http://localhost/cms/pc/statics/assets//bs/js/holder.min.js"></script>
+<link rel="stylesheet" href="http://localhost/cms/pc/statics/assets/css/Lindex.css?v=2.0">
+<script src="http://localhost/cms/pc/statics/assets/js/jquery.min.js?v=2.0"></script>
+<script src="http://localhost/cms/pc/statics/assets/js/jquery.royalslider.min.js?v=2.0"></script>
+<!--[if lt IE 9]>
+<script src="http://localhost/cms/pc/statics/assets/js/html5.js"></script>
+<link rel="stylesheet" href="http://localhost/cms/pc/statics/assets/css/Lie.css">
+<![endif]-->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost/cms/pc/statics/assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="http://localhost/cms/pc/statics/assets/ico/favicon.png">
+</head>
+<body>
+<header style="background-color:black;">
+<!-- nav -->
+<nav class="uk-navbar" style="background-color:black;height:80px;">
+	<div class="uk-container uk-container-center">
+		<a class="uk-navbar-brand" href="."><img src="http://localhost/cms/pc/statics/assets/images/logo.png" width="288" height="38" style="position:relative;top:-20px;"></a>
+				<ul class="uk-navbar-nav hidden-small" style="position:relative;left:-300px;">
+			<li   class="uk-active"><a href=".">首页</a></li>
+									<li  class="uk-parent"> <a href="http://localhost/cms/pc/index.php?m=content&c=index&a=lists&catid=6">创业工坊</a>
+															</li>
+												<li  class="uk-parent"> <a href="http://localhost/cms/pc/index.php?m=content&c=index&a=lists&catid=12">创业者学院</a>
+															</li>
+												<li  class="uk-parent"> <a href="#">资讯动态</a>
+												<div class="uk-dropdown uk-dropdown-navbar">
+					<ul class="uk-nav uk-nav-navbar">
+												<li><a href="http://localhost/cms/pc/index.php?m=content&c=index&a=lists&catid=24">创业公司</a></li>
+												<li><a href="http://localhost/cms/pc/index.php?m=content&c=index&a=lists&catid=25">大学生创业</a></li>
+											</ul>
+				</div>
+											</li>
+									
+		</ul>
+				<ul class="uk-navbar-nav hidden-small" style="position:relative;right:-350px;">
+			<li style="margin-top:5px">
+				<span>
+				 
+				</span>
+						<span style="margin-bottom:10px;margin-right:80px">
+							<a style="font-size:18px;color:#fff;" href="http://localhost/cms/pc/index.php?m=member&c=index&a=register&siteid=1" target="_blank">注册</a>
+								&nbsp;&nbsp;&nbsp;&nbsp;
+							<a style="font-size:18px;color:#fff;" href="http://localhost/cms/pc/index.php?m=member&c=index&a=login&forward=&siteid=1" target="_top">登录</a>
+						</span>
+							</li>
+		</ul>
+		<div class="uk-navbar-flip"><a href="#tm-offcanvas" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas=""></a></div>
+	</div>
+</nav>
+<!-- / nav -->
+</header><style>
+* { margin: 0 ; padding: 0;}
+.flexslider { position: relative; height: 400px; overflow: hidden; background: url(http://localhost/cms/pc/statics/assets/images/loading.gif) 50% no-repeat;width:1500px;}
+.slides { position: relative; z-index: 1;width:1500px}
+.slides li { height: 400px;}
+.flex-control-nav { position: absolute;height:50px; bottom: 10px;top:360px;left:-80px; z-index: 2; width: 100%; text-align: center;}
+.flex-control-nav li { display: inline-block; width: 14px; height: 14px; margin: 0 5px; *display: inline; zoom: 1;}
+.flex-control-nav a { display: inline-block; width: 14px; height: 14px; line-height: 40px; overflow: hidden; background: url(http://localhost/cms/pc/statics/assets/images/dot.png) right 0 no-repeat; cursor: pointer;}
+.flex-control-nav .flex-active { background-position: 0 0;}
+</style>
+</head>
+
+<body>
+ <center>
+
+<div class="flexslider">
+	<ul class="slides">
+	        		 
+		<li>
+			<a style="margin-left:-60px;" href="http://localhost/cms/pc/index.php?m=content&c=index&a=show&catid=6&id=2" target="_blank" title="轮播图2"><img src="http://localhost/cms/pc/uploadfile/2017/0510/thumb_1500_400_20170510083509450.jpg" alt="轮播图2" /></a>
+		</li>
+		 
+		<li>
+			<a style="margin-left:-60px;" href="http://localhost/cms/pc/index.php?m=content&c=index&a=show&catid=6&id=1" target="_blank" title="轮播图1"><img src="http://localhost/cms/pc/uploadfile/2017/0510/thumb_1500_400_20170510081705382.jpg" alt="轮播图1" /></a>
+		</li>
+		 
+            	</ul>
+</div>
+
+</center>
+
+<script src="http://localhost/cms/pc/statics/assets/js/jquery-1.7.2.min.js"></script>
+<script src="http://localhost/cms/pc/statics/assets/js/jquery.flexslider-min.js"></script>
+<script>
+$(window).load(function() {
+	$('.flexslider').flexslider({
+		directionNav: false,
+		pauseOnAction: false
+	});
+});
+</script>
+<div id="content">
+	<div class="uk-container uk-container-center">
+		<!-- Main -->
+		<main class="uk-width-1-1">
+			<div id="main" >
+									<div class="uk-grid" style="margin-bottom:50px">
+				<div class="uk-width-1-1" style="width:860px;">
+					<div class="menu" style="width:860px;">
+						<h2 style="background-color:#4D4D4D">创业工坊</h2>
+						<span class="sub">
+																											</span>
+						<span class="more">
+							<a href="http://localhost/cms/pc/index.php?m=content&c=index&a=lists&catid=6" target="_blank">更多>></a>
+						</span>
+					</div>
+				</div>
+				<div class="uk-width-1-1"  style="width:860px;">
+					<div class="uk-grid tm-mix" style="background-color:#ccc;margin-left:0px;height:250px;" >
+						<span class="uk-width-medium-1-3" style="width:500px;height:250px;">
+							             											<div class="tm-focus" style="height:250px;width:500px;margin-left:-20px">
+								<div class="thumb" style="height:250px;width:500px;">
+									<a href="http://localhost/cms/pc/index.php?m=content&c=index&a=show&catid=6&id=1" target="_blank">
+									<img src="http://localhost/cms/pc/uploadfile/2017/0510/thumb_273_135_20170510081705382.jpg" alt="轮播图1" style="width:500px;height:250px;">
+									<div class="uk-overlay-area" style="height:250px;width:500px;"></div></a>
+								</div>
+							</div>
+							
+						</span>
+						<span class="uk-width-medium-1-3" style="margin-left:500px;margin-top:-150px;">
+							<div class="tm-list" >
+								<ul>		
+									<li>
+									<div style="color:#1891D2;font-size:25px;margin-left: 50px;margin-top:-80px;">轮播图1</div>
+									<div style="font-size:25px;margin-left:90px;margin-top:70px">
+										<a href="http://localhost/cms/pc/index.php?m=content&c=index&a=show&catid=6&id=1" title="轮播图1" target="_blank" style="color:#FFF;">查看详情>>
+										</a>
+									</div>
+									</li>									
+								</ul>
+								              											</div>
+						</span>
+					</div>
+				</div>
+			</div>
+			<!-- 创业工坊 -->
+									<div class="uk-grid" style="margin-bottom:50px">
+				<div class="uk-width-1-1" style="width:860px;">
+					<div class="menu" style="width:860px;">
+						<h2 style="background-color:#4D4D4D">创业者学院</h2>
+						<span class="sub">
+																											</span>
+						<span class="more">
+							<a href="http://localhost/cms/pc/index.php?m=content&c=index&a=lists&catid=12" target="_blank">更多>></a>
+						</span>
+					</div>
+				</div>
+				<div class="uk-width-1-1"  style="width:860px;">
+					<div class="uk-grid tm-mix" style="background-color:#ccc;margin-left:0px;height:250px;" >
+						<span class="uk-width-medium-1-3" style="width:500px;height:250px;">
+							             											<div class="tm-focus" style="height:250px;width:500px;margin-left:-20px">
+								<div class="thumb" style="height:250px;width:500px;">
+									<a href="http://localhost/cms/pc/index.php?m=content&c=index&a=show&catid=12&id=6" target="_blank">
+									<img src="http://localhost/cms/pc/uploadfile/2017/0514/thumb_273_135_20170514105013186.jpg" alt="创业加油站" style="width:500px;height:250px;">
+									<div class="uk-overlay-area" style="height:250px;width:500px;"></div></a>
+								</div>
+							</div>
+							
+						</span>
+						<span class="uk-width-medium-1-3" style="margin-left:500px;margin-top:-150px;">
+							<div class="tm-list" >
+								<ul>		
+									<li>
+									<div style="color:#1891D2;font-size:25px;margin-left: 50px;margin-top:-80px;">创业加油站</div>
+									<div style="font-size:25px;margin-left:90px;margin-top:70px">
+										<a href="http://localhost/cms/pc/index.php?m=content&c=index&a=show&catid=12&id=6" title="创业加油站" target="_blank" style="color:#FFF;">查看详情>>
+										</a>
+									</div>
+									</li>									
+								</ul>
+								              											</div>
+						</span>
+					</div>
+				</div>
+			</div>
+			<!-- 创业者学院 -->
+									<div class="uk-grid" style="margin-bottom:50px">
+				<div class="uk-width-1-1" style="width:860px;">
+					<div class="menu" style="width:860px;">
+						<h2 style="background-color:#4D4D4D">资讯动态</h2>
+						<span class="sub">
+														<a href="http://localhost/cms/pc/index.php?m=content&c=index&a=lists&catid=24" target="_blank">创业公司</a>/<a href="http://localhost/cms/pc/index.php?m=content&c=index&a=lists&catid=25" target="_blank">大学生创业</a>/													</span>
+						<span class="more">
+							<a href="http://localhost/cms/pc/index.php?m=content&c=index&a=lists&catid=23" target="_blank">更多>></a>
+						</span>
+					</div>
+				</div>
+				<div class="uk-width-1-1"  style="width:860px;">
+					<div class="uk-grid tm-mix" style="background-color:#ccc;margin-left:0px;height:250px;" >
+						<span class="uk-width-medium-1-3" style="width:500px;height:250px;">
+							             											<div class="tm-focus" style="height:250px;width:500px;margin-left:-20px">
+								<div class="thumb" style="height:250px;width:500px;">
+									<a href="http://localhost/cms/pc/index.php?m=content&c=index&a=show&catid=25&id=11" target="_blank">
+									<img src="http://localhost/cms/pc/uploadfile/2017/0517/thumb_273_135_20170517033010579.jpg" alt="脑战-人工智能 创业工坊专场活动圆满落幕" style="width:500px;height:250px;">
+									<div class="uk-overlay-area" style="height:250px;width:500px;"></div></a>
+								</div>
+							</div>
+							
+						</span>
+						<span class="uk-width-medium-1-3" style="margin-left:500px;margin-top:-150px;">
+							<div class="tm-list" >
+								<ul>		
+									<li>
+									<div style="color:#1891D2;font-size:25px;margin-left: 50px;margin-top:-80px;">脑战-人工智能 创业工坊专场活动圆...</div>
+									<div style="font-size:25px;margin-left:90px;margin-top:70px">
+										<a href="http://localhost/cms/pc/index.php?m=content&c=index&a=show&catid=25&id=11" title="脑战-人工智能 创业工坊专场活动圆满落幕" target="_blank" style="color:#FFF;">查看详情>>
+										</a>
+									</div>
+									</li>									
+								</ul>
+								              											</div>
+						</span>
+					</div>
+				</div>
+			</div>
+			<!-- 资讯动态 -->
+						</div>
+		</main>
+		<!-- / Main -->
+		<!-- Sidebar -->
+<aside class="uk-hidden-small">
+	<div id="sidebar">
+	<section class="search">
+		<div class="bd">
+			<form class="uk-search" data-uk-search action="http://localhost/cms/pc/index.php" method="get" target="_blank">
+				<input type="hidden" name="m" value="search"/>
+				<input type="hidden" name="c" value="index"/>
+				<input type="hidden" name="a" value="init"/>
+				<input type="hidden" name="typeid" value="1" id="typeid"/>
+				<input type="hidden" name="siteid" value="1" id="siteid"/>
+				<input class="uk-search-field" type="text" name="q" placeholder="输入要搜索的关键字...">
+				<button class="uk-search-close" type="reset"></button>
+				<input type="submit" class="uk-button" id="searchsubmit" value="搜索" style="float:right;">
+			</form>
+		</div>
+		<div class="uk-clearfix"></div>
+	</section>
+	<!-- 站内搜索 -->
+	<section class=" box1" >
+		<a ><img src="http://localhost/cms/pc/statics/assets/images/join.jpg" style="width:100%;height:100%;"></a>
+	</section>
+	<section class="social box1">
+		<div class="hd"><h3>关注我们</h3></div>
+		<div class="uk-grid">
+			<div class="uk-width-1-3">
+				<a href="javascript:void(0)" onclick="window.open('http://weibo.com/andkin')" class="x" target="_blank" rel="nofollow">
+					<i class="uk-icon-weibo uk-icon-large"></i>
+				</a>
+				<span>新浪微博</span>
+			</div>
+			<div class="uk-width-1-3">
+				<a href="#qrcode" data-uk-modal class="t">
+					<i class="uk-icon-comments uk-icon-large"></i>
+				</a>
+				<span>微信订阅</span>
+			</div>
+			<div class="uk-width-1-3">
+				<a href="javascript:void(0)" onclick="window.open('http://list.qq.com/cgi-bin/qf_invite?id=7fbe96fb841a59ac238168d68cbc82de3dae756e32ef1084')" class="r" target="_blank" rel="nofollow">
+					<i class="uk-icon-rss uk-icon-large"></i>
+				</a>
+				<span>订阅邮件</span>
+			</div>
+		</div>
+	</section>
+	<div id="qrcode" class="uk-modal">
+		<div class="uk-modal-dialog uk-modal-dialog-frameless" style="width:344px;margin-left:-172px;">
+			<a href="" class="uk-modal-close uk-close uk-close-alt"></a>
+			<img src="http://localhost/cms/pc/assets/images/getqrcode.jpg" alt="安妮导刊微信二维码">
+		</div>
+	</div>
+	<!-- 关注我们 -->
+		<section class="box1">
+		<div class="hd">
+			<h3>本周热门阅读</h3>
+		</div>
+		<div class="bd">
+			<ul class="uk-list uk-list-striped">
+											<li><span>7次浏览</span><i class="uk-icon-caret-right"></i><a href="http://localhost/cms/pc/index.php?m=content&c=index&a=show&catid=21&id=8" title="个梵蒂冈色瑞特让他" target="_blank">个梵蒂冈色瑞特让他</a></li>
+								<li><span>3次浏览</span><i class="uk-icon-caret-right"></i><a href="http://localhost/cms/pc/index.php?m=content&c=index&a=show&catid=6&id=7" title="双创巡展日" target="_blank">双创巡展日</a></li>
+								<li><span>2次浏览</span><i class="uk-icon-caret-right"></i><a href="http://localhost/cms/pc/index.php?m=content&c=index&a=show&catid=6&id=1" title="轮播图1" target="_blank">轮播图1</a></li>
+								<li><span>2次浏览</span><i class="uk-icon-caret-right"></i><a href="http://localhost/cms/pc/index.php?m=content&c=index&a=show&catid=6&id=1" title="轮播图1" target="_blank">轮播图1</a></li>
+								<li><span>1次浏览</span><i class="uk-icon-caret-right"></i><a href="http://localhost/cms/pc/index.php?m=content&c=index&a=show&catid=6&id=2" title="轮播图2" target="_blank">轮播图2</a></li>
+								<li><span>1次浏览</span><i class="uk-icon-caret-right"></i><a href="http://localhost/cms/pc/index.php?m=content&c=index&a=show&catid=12&id=4" title="中国创业学院" target="_blank">中国创业学院</a></li>
+								<li><span>1次浏览</span><i class="uk-icon-caret-right"></i><a href="http://localhost/cms/pc/index.php?m=content&c=index&a=show&catid=12&id=6" title="创业加油站" target="_blank">创业加油站</a></li>
+								<li><span>0次浏览</span><i class="uk-icon-caret-right"></i><a href="http://localhost/cms/pc/index.php?m=content&c=index&a=show&catid=21&id=9" title="带我飞我二哥" target="_blank">带我飞我二哥</a></li>
+										</ul>
+		</div>
+	</section>
+	<!-- 本周热门阅读 -->
+		
+
+	</div>
+</aside>
+<!-- / Sidebar -->		<!-- otherItem... -->
+	</div>
+</div>
+<div style="height:100px;"></div>
+<center>
+<div class="bk10"></div>
+	
+	<div class="box blogroll ylink">
+        <div class="bk10"></div>
+	<ul class="colli imgul">
+                            </ul>
+          <div class="bk10"></div>
+	<div class="linka" style="font-size:20px;margin-left:-800px;">
+	<span>友情链接 : </span>
+		                            <a href="http://www.baidu.com" target="_blank">百度</a> |
+              		                            <a href="http://www.sdo.com" target="_blank">盛大在线</a> |
+              		                            <a href="http://www.taobao.com" target="_blank">淘宝</a> |
+              		 	</div>
+	</div>
+</div>
+<br>
+<div class="footer" style="background-color:#4D4D4D;height:130px;color:#FFFFFF;">
+<p class="info" style="position:relative;top:20px;">
+<a href="http://localhost/cms/pc/html/about/aboutus/" target="_blank" style="color:#FFFFFF;font-size:20px;margin-top:-20px;">关于我们</a> |
+<a href="http://localhost/cms/pc/html/about/contactus/" target="_blank" style="color:#FFFFFF;font-size:20px;margin-top:-20px;">联系方式</a> |
+<a href="http://localhost/cms/pc/html/about/copyright/" target="_blank" style="color:#FFFFFF;font-size:20px;margin-top:-20px;">版权声明</a> |
+<br><br><br><br>
+<div>Copyright © 2017.南京博峻电子商务有限公司 | 苏ICP备15060379号</div>
+</div>
+
+</center>
+<script type="text/javascript">
+$(function(){
+	$(".picbig").each(function(i){
+		var cur = $(this).find('.img-wrap').eq(0);
+		var w = cur.width();
+		var h = cur.height();
+	   $(this).find('.img-wrap img').LoadImage(true, w, h,'http://localhost/cms/pc/statics/images/msg_img/loading.gif');
+	});
+})
+</script>

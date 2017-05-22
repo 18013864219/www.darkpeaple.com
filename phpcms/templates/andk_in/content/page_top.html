@@ -1,0 +1,26 @@
+{template "content","header"}
+<style type="text/css">
+#content ul li{
+    margin-top: 10px;
+    font-size:25px; 
+}
+</style>
+<div id="content">
+	<div class="col-left left-nav" style="margin-left:150px;">
+    	<h1>关于我们</h1>
+    	<ul class="content">
+        	{loop $arrchild_arr $cid}
+                <li{if $catid==$cid} class="cur"{/if}><a href="{$CATEGORYS[$cid][url]}">{$CATEGORYS[$cid][catname]}</a></li>
+			{/loop}
+        </ul>
+        <div class="bottom"></div>
+    </div>
+  <div class="col-auto" style="width:800px;border:5px solid #000000;padding:10px;margin-top:-150px;margin-left:400px;">
+    	<h1 class="title" style="text-align:center;">{$title}</h1>
+        <div class="content">
+        	    {$content}
+        </div>
+    </div>
+ </div>
+ 
+{template "content","footer"}
